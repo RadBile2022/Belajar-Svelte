@@ -1,0 +1,9 @@
+server:
+  resourcePath: resources/
+  mediaPath: resources/media/
+  brandPath: resources/brand/
+  avatarPath: avatar/
+  avatarUploadPath: _imgs/avatar/
+  disableRequestLogging: true
+  cors:
+    origin: "*"

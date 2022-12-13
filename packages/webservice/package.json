@@ -1,0 +1,38 @@
+{
+  "name": "rest-api",
+  "version": "0.0.0",
+  "description": "service api LMS",
+  "license": "SEE ./LICENSE.md",
+  "type": "module",
+  "maintainers": [
+    {
+      "name": "Nurdiansyah",
+      "email": "nur.diansyah.ckt@gmail.com"
+    }
+  ],
+  "scripts": {
+    "start": "node dist/index.js",
+    "build": "tsup",
+    "dev": "cross-env NODE_ENV=development pnpm build --watch src",
+    "format": "eslint --fix src",
+    "typecheck:eslint": "eslint --fix \"**/src/**/*.ts?(x)\"",
+    "typecheck:tsc": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@deboxsoft/cron-jobs": "^0.5.3",
+    "@deboxsoft/module-core": "~2.6.40",
+    "@deboxsoft/module-fastify": "^2.0.18",
+    "@deboxsoft/module-mongo": "^2.6.17",
+    "@deboxsoft/module-server": "~2.6.14",
+    "@deboxsoft/lms-api": "workspace:^",
+    "@deboxsoft/lms-server": "workspace:^",
+    "@deboxsoft/users-api": "^1.5.42",
+    "@deboxsoft/users-server": "^1.5.59",
+    "fastify": "^4.5.3",
+    "@fastify/static": "^6.6.0",
+    "notation": "^2.0.0",
+    "formidable": "^3.2.5",
+    "mongodb": "^4.12.1",
+    "mqemitter": "^5.0.0"
+  }
+}

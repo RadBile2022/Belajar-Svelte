@@ -1,0 +1,45 @@
+{
+  "name": "@deboxsoft/lms-api",
+  "version": "0.0.0",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/deboxsoft/lms-poltek",
+    "directory": "packages/api"
+  },
+  "maintainers": [
+    {
+      "name": "Nurdiansyah",
+      "email": "nur.diansyah.ckt@gmail.com"
+    }
+  ],
+  "types": "libs/index.d.ts",
+  "type": "module",
+  "exports": {
+    ".": "./libs/index.js"
+  },
+  "files": [
+    "libs"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "format": "eslint --fix 'src/**/*.ts'",
+    "test": "ava",
+    "test:watch": "ava -w",
+    "bump": "pnpm build && bump",
+    "publish:dev": "pnpm publish --tag dev --no-git-checks",
+    "release": "pnpm bump -t \"api-v\" -c \"release api v\" && pnpm publish",
+    "release:dev": "pnpm bump prerelease && pnpm publish:dev"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@deboxsoft/module-core": "^2.6.41",
+    "mustache": "~4.1.0"
+  },
+  "peerDependencies": {
+    "@deboxsoft/module-core": "2.x",
+    "mustache": "4.x"
+  }
+}

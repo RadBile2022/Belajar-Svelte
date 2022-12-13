@@ -1,0 +1,45 @@
+app:
+  host: 192.168.1.150
+  port: 4000
+  module-name: tefa
+web:
+  host: 192.168.1.150
+  port: 3001
+  secure: false
+server-api:
+  host: 192.168.1.150
+  port: 4000
+  apiPath: api
+  wsPath: ws
+  protocol: http
+users:
+  tokenSecret: dbx-secret
+  errors:
+    ACCESS_CONTROL_SAVE_FAILED: gagal menyimpan data hak akses
+    LOGIN_FAILED: login tidak berhasil
+    USERNAME_NOT_FOUND: username '{{username}}' tidak ditemukan
+    USERNAME_REQUIRED: username harus diisi
+    PASSWORD_NOT_MATCH: password anda tidak cocok
+    PASSWORD_REQUIRED: password harus diisi
+    CHANGE_PASSWORD_FAILED: edit password gagal
+    LOGOUT_FAILED: logout gagal
+    EMAIL_NOT_FOUND: email tidak ditemukan
+    TOKEN_VERIFICATION_FAILED: token tidak valid
+    INVALID_SESSION: session tidak valid
+    AUTHENTICATE_FAILED: autentikasi tidak berhasil
+    UNAUTHOIZED: akses ditolak
+    SAVE_SESSION_FAILED: gagal menyimpan session
+    REMOVE_SESSION_FAILED: gagal menghapus session id '{{id}}'
+    REMOVE_ALL_SESSION_USER: gagal menghapus semua session user id '{{userId}}'
+    SESSION_NOT_FOUND: session id '{{id}}' tidak ditemukan
+    USER_EXIST: user sudah terdaftar
+    CREATE_USER_FAILED: gagal membuat user
+    UPDATE_USER_FAILED: gagal mengupdate user '{{id}}'
+    REMOVE_USER_FAILED: gagal menghapus user '{{id}}'
+    CREATE_USER_GROUP_FAILED: gagal membuat group user
+    UPDATE_USER_GROUP_FAILED: gagal mengupdate group user
+    REMOVE_USER_GROUP_FAILED: gagal menghapus group user
+    USER_IDENTITY_REQUIRED: identitas user harus diisi
+    USER_NOT_FOUND: user tidak ditemukan
+tefa:
+  repoPath: repo

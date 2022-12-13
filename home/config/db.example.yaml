@@ -1,0 +1,3 @@
+db:
+  uri: mongodb://${user}:${password}@${url}:27017/?authSource=${authSource}
+  databaseName: ${dbName}

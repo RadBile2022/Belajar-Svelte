@@ -1,0 +1,6 @@
+@import "tailwindcss/base.css";
+@import "@deboxsoft/svelte-themes/primer/base.css";
+@import "@deboxsoft/svelte-themes/primer/themes/light.css";
+@import "@deboxsoft/svelte-components/styles/base.css";
+@import "tailwindcss/components.css";
+@import "tailwindcss/utilities.css";
