@@ -27,7 +27,7 @@
 </script>
 
 <div class="flex justify-center mt-10">
-  <h5 class="font-semibold text-3xl ">Daftar Buku</h5>
+  <h5 class="font-semibold text-2xl ">Daftar Buku</h5>
 </div>
 
 <div class="flex justify-between mt-5 mb-5 mx-20">
@@ -47,25 +47,29 @@
   </div>
 </div>
 
-<table class="border w-10/12 mx-auto text-justify ">
+<ul class="border w-10/12 mx-auto text-justify ">
   {#each data as item}
-    <thead class="text-slate-700 bg-gray-200 border font-semibold text-sm  ">
+    <!-- <li class="text-slate-700 bg-gray-200 border font-semibold text-sm  ">
       <tr>
         <th class="py-3 px-6">{item.judul}</th>
         <th class="py-3 px-6">{item.status}</th>
         <th class="py-3 px-6">{item.updateTime}</th>
         <th class="py-3 px-6">{item.createDate}</th>
       </tr>
-    </thead>
-    <tbody>
+    </thead> -->
+    <li class="">
       {#each item.row as row}
-        <tr class="hover:cursor-pointer font-normal hover:bg-blue-100 text-sm">
-          <td class="py-3 px-6 ">{row.judul}</td>
-          <td>{row.status}</td>
-          <td>{row.updateTime}</td>
-          <td>{row.createDate}</td>
-        </tr>
+        <ul class="hover:cursor-pointer  hover:bg-blue-100  py-3 px-6 border-b ">
+          <li class=" text-lg font-semibold">{row.judul}</li>
+          <div class="flex text-xs mt-5 text-slate-500">
+            <p class=" mr-5 ">{row.status}</p>
+            <p class="mr-16">{row.updateTime}</p>
+            <p class="mr-5">Created Date</p>
+            <p>{row.createDate}</p>
+          </div>
+        
+        </ul>
       {/each}
-    </tbody>
+      </li>
   {/each}
-</table>
+</ul>
